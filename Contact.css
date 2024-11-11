@@ -1,100 +1,36 @@
-/* Reset margin and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* About.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+
+html, body{
+	height: 100%;
+	width: 100%;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-}
 
-.contact-page {
-  background-color: #6B73E8;
-  color: #ffffff;
+.about-page {
+  background-color: #6B73E8; /* Teal-blue background */
+  color: #ffffff; /* White text */
   padding: 20px;
-  font-family: 'Antonio', sans-serif;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Makes it take the full viewport height */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center;
-}
-
-.contact-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.contact-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.contact-header p {
-  font-size: 1.3em;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.contact-item {
-  text-align: center;
-  font-size: 1.5em;
-}
-
-.contact-item h3 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.contact-item p {
-  font-size: 1.2em;
-}
-
-.contact-item a {
-  color: #72ff79;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact-item a:hover {
-  text-decoration: underline;
-  color: #ffffff;
-}
-
-.back-to-home {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.back-to-home a {
-  background-color: #6be89b;
-  color: #000000;
-  border: none;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  justify-content: space-between; /* Ensures content spreads across the height */
   font-family: 'Antonio', sans-serif;
 }
 
-.back-to-home a:hover {
-  background-color: #00dd55;
-}
 
 .header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 0; /* Make sure the header stays aligned to the viewport */
+  right: 0; /* Extend to the full width */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,12 +41,27 @@ html, body {
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 28px;
+  color: #D7D9CE;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, 0.3s ease, background-color 0.3s ease;
+}
+
+.brand:hover {
+  transform: scale(1.2);
+  color: #FFFFFF;
 }
 
 .nav-links {
   display: flex;
   gap: 25px;
   align-items: center;
+  font-family: 'Antonio', sans-serif;
 }
 
 .nav-links a {
@@ -131,9 +82,72 @@ html, body {
   width: 100%;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .contact-info {
-    flex-direction: column; /* Stack contact info vertically */
-  }
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between brand logo and nav links */
+  background-color: #6B73E8; /* Adjust background color if needed */
 }
+
+.about-header .brand {
+  font-size: 1.8rem;
+  color: #FFF;
+  text-decoration: none;
+}
+
+
+.back-to-login {
+  background-color: #6be89b;
+  color: #000000;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 30%;
+  align-self: center;
+  transition: background-color 0.3s ease;
+  font-family: 'Antonio', sans-serif;;
+}
+
+.back-to-login:hover {
+  background-color: #00dd55;
+}
+
+/* Centering the contact info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center text inside the items */
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-item h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 1.3em;
+}
+
+.contact-item a {
+  color: #72ff79;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
